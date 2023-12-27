@@ -25,7 +25,7 @@ public class ScannerExample {
 			System.out.println("출력문자열: " + data);
 			System.out.println();
 		}
-		
+		scanner.close();
 		System.out.println("종료");
 	}
 }
