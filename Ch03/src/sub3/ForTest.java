@@ -2,9 +2,9 @@ package sub3;
 
 
 /*
- * 날짜 : 2023/12/26
+ * 날짜 : 2023/12/27
  * 이름 : 이승윤
- * 내용 : Ch02, Java 변수와 연산자
+ * 내용 : Ch03, Java 반복문
  */
 
 public class ForTest {

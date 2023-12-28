@@ -3,7 +3,7 @@ package sub2;
 import java.util.Scanner;
 
 /*
- * 날짜 : 2023/12/26
+ * 날짜 : 2023/12/27
  * 이름 : 이승윤
  * 내용 : Ch03, Java 조건문 switch 실습하기
  */
