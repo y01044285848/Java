@@ -15,7 +15,7 @@ public class Test1 {
 			boolean var6 = true;
 			boolean var7 = false;
 			String var8 = "hello";
-			String var9 = null;
+			String var9 = null; // 참조변수의 값이 없음을 의미
 			
 			System.out.println("var1 : " + var1);
 			System.out.println("var2 : " + var2);
