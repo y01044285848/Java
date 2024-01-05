@@ -6,7 +6,7 @@ package test3;
  * 내용 : 정적변수 연습문제
  */
 class Student {
-	protected static int studentId;
+	public static int studentId;
 	private String studentName;
 	private String major;
 	private int grade;
