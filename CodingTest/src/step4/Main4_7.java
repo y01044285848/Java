@@ -1,6 +1,5 @@
 package step4;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main4_7 {
@@ -19,9 +18,14 @@ public class Main4_7 {
 				}
 			}
 		}
+
 		int check = 0;
-		for(int b = 0; b < 30; b++) {
-			
+		for(int b = 1; b <= 30; b++) {
+			if(arr[check]!=b) {
+				System.out.println(b);
+			}else {
+				check++;
+			}
 		}
 	}
 }
