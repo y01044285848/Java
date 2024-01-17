@@ -81,7 +81,7 @@ public class LambdaTest {
 		// 메서드 참조 연산자
 		E e1 = Math::ceil;
 		E e2 = Math::floor;
-		E e3 = Math::round;
+		E e3 = Math::round; 
 
 		double n1 = e1.method(1.2);
 		double n2 = e1.method(2.3);
