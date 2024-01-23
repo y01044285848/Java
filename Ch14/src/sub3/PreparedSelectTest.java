@@ -14,8 +14,8 @@ import java.util.List;
  * 이름 : 이승윤
  * 내용 : JDBC prepared statement 실습하기
  * 
- * PreparedStatment
- * - 기존 Statment 보다 향상된 동적 SQL 생성을 위한 Statement
+ * PreparedStatement
+ * - 기존 Statement 보다 향상된 동적 SQL 생성을 위한 Statement
  * - Query Parameter를 사용해서 값을 Mapping(사상, 바인딩) 시켜 쿼리를 실행
  * 
  * VO(Value Object) 객체
