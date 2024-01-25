@@ -104,6 +104,16 @@ public class MyShopMain {
 				
 			} else if (answer == 4) {
 				// 주문하기
+				if(loginedCustomer==null) {
+					System.out.println("로그인 필요");
+				}else {
+					String custId = loginedCustomer.getCustId();
+					OrderDTO order = new OrderDTO();
+					order.setOrderId(custId);
+					order.setOrderProduct(0);
+					order.setOrderCount(0);
+					
+				}
 			}
 		}
 
