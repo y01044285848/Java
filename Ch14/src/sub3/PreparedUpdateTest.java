@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 
 /*
- * 날짜 : 2024/01/22
+ * 날짜 : 2024/01/23
  * 이름 : 이승윤
  * 내용 : JDBC prepared statement 실습하기
  */
