@@ -64,7 +64,7 @@ public class OrderDTO {
 	}
 	@Override
 	public String toString() {
-		return orderNo + ", " + orderId + "," + orderProduct + ", " + prodName + ", " + price + ", " + company + ", " + orderDate;
+		return orderNo + ", " + orderId + "," + orderProduct + ", " + orderCount + ", " + prodName + ", " + price + ", " + company + ", " + orderDate;
 	}
 	
 }

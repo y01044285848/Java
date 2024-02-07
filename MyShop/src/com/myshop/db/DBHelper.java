@@ -12,6 +12,7 @@ public class DBHelper {
 	protected Connection conn = null;
 	protected Statement stmt = null;
 	protected PreparedStatement psmt = null;
+	protected PreparedStatement psmtEtc = null;
 	protected ResultSet rs = null;
 	// DB 정보
 	private final String HOST = "jdbc:mysql://127.0.0.1:3306/shop";
@@ -33,6 +34,9 @@ public class DBHelper {
 		}
 		if (psmt != null) {
 			psmt.close();
+		}
+		if (psmtEtc != null) {
+			psmtEtc.close();
 		}
 		if (stmt != null) {
 			stmt.close();

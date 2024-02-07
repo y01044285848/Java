@@ -74,10 +74,7 @@ public class ProductDAO extends DBHelper {
 	public void updateProduct(ProductDTO dto) {
 		try {
 
-			//3단계
-			//4단계
-			//5단계
-			//6단계
+
 		}catch(Exception e) {
 			e.printStackTrace();
 		}

@@ -63,57 +63,70 @@ public class MyShopMain {
 
 			} else if (answer == 2) {
 
-				if(loginedCustomer == null) {
+				if (loginedCustomer == null) {
 					// 회원가입
 					CustomerDTO customer = new CustomerDTO();
-					
+
 					System.out.println("아이디 입력 : ");
 					customer.setCustId(sc.next());
-					
+
 					System.out.println("이름 입력 : ");
 					customer.setName(sc.next());
-					
+
 					System.out.println("휴대폰 입력 : ");
 					customer.setHp(sc.next());
-					
+
 					System.out.println("주소 입력 : ");
 					customer.setAddr(sc.next());
-					
+
 					customerDAO.insertCustomer(customer);
-					
+
 					System.out.println("회원가입을 하셨습니다.");
-					
-				}else {
+
+				} else {
 					// 주문현황
 					String custId = loginedCustomer.getCustId();
 					List<OrderDTO> orders = orderDAO.selectOrders(custId);
-					
+
 					System.out.println("-----------주문현황-----------");
-					for(OrderDTO order : orders) {
+					for (OrderDTO order : orders) {
 						System.out.println(order);
 					}
 				}
-				
+
 			} else if (answer == 3) {
 				// 상품목록
 				List<ProductDTO> products = productDAO.selectProducts();
 				System.out.println("-----------상품목록-----------");
-				for(ProductDTO product : products) {
-					System.out.println(product);
-				}
-				
+				/*
+				 * for(ProductDTO product : products) { System.out.println(product); }
+				 */
+
+				products.stream().forEach(System.out::println);
+
 			} else if (answer == 4) {
 				// 주문하기
-				if(loginedCustomer==null) {
+				if (loginedCustomer == null) {
 					System.out.println("로그인 필요");
-				}else {
-					String custId = loginedCustomer.getCustId();
-					OrderDTO order = new OrderDTO();
-					order.setOrderId(custId);
-					order.setOrderProduct(0);
-					order.setOrderCount(0);
-					
+					continue;
 				}
+				
+				System.out.println("주문 상품 번호 입력 : ");
+				int prodNo = Integer.parseInt(sc.next());
+				
+				System.out.println("주문 주문 수량 입력 : ");
+				int prodCount = Integer.parseInt(sc.next());
+				
+				OrderDTO order = new OrderDTO();
+				
+				String custId = loginedCustomer.getCustId();
+				order.setOrderId(custId);
+				order.setOrderProduct(prodNo);
+				order.setOrderCount(prodCount);
+
+				orderDAO.insertOrder(order);
+				
+				System.out.println("주문 완료...");
 			}
 		}
 
